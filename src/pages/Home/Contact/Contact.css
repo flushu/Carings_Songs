@@ -1,0 +1,40 @@
+.section{
+  background-color: #212529;
+  background-image: url(./map-image.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 150px 0;
+}
+.heading{
+  color: #fff;
+  font-size: 40px;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+.subheading{
+  font-size: 16px;
+  font-weight: 400;
+  font-style: italic;
+  margin-bottom: 75px;
+  text-transform: none;
+}
+.form_group{
+  margin-bottom: 25px;
+}
+.form_group input{
+  padding: 20px;
+}
+.textarea{
+  height: 248px;
+}
+.btn{
+  background-color: #fed136;
+  border-color: #fed136;
+  font-size: 18px;
+  padding: 20px 40px;
+  font-weight: 700;
+}
+.btn:hover{
+  background-color: #ffa136;
+  border-color: #ffa136;
+}
