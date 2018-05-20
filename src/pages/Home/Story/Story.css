@@ -23,6 +23,10 @@
 .image_btn:hover{
   background-color: #ffa136 !important;
 }
+.image_btn a{
+  text-decoration: none;
+  color: white;
+}
 
 
 /** library **/

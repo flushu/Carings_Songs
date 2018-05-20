@@ -1,9 +1,10 @@
 import React from 'react';
 import styles from './Story.css';
+import {NavLink} from 'react-router-dom';
 import pic1 from './img/story1.jpg';
-import pic2 from './img/2.jpg';
-import pic3 from './img/3.jpg';
-import pic4 from './img/4.jpg';
+import pic2 from './img/story2_lj.jpeg';
+import pic3 from './img/story2_thor.jpg';
+import pic4 from './img/story4_kittens.jpg';
 
 export default class Story extends React.Component {
   render() {
@@ -39,8 +40,8 @@ export default class Story extends React.Component {
                   </div>
                   <div className={styles.timeline_panel}>
                     <div className={styles.timeline_heading}>
-                      <h4>March 2011</h4>
-                      <h4 className="subheading">An Agency is Born</h4>
+                      <h4>April 2018</h4>
+                      <h4 className="subheading">Lady Jane was adopted</h4>
                     </div>
                     <div className={styles.timeline_body}>
                       <p className="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
@@ -53,8 +54,8 @@ export default class Story extends React.Component {
                   </div>
                   <div className={styles.timeline_panel}>
                     <div className={styles.timeline_heading}>
-                      <h4>December 2012</h4>
-                      <h4 className="subheading">Transition to Full Service</h4>
+                      <h4>May 2018</h4>
+                      <h4 className="subheading">Thor was adopted</h4>
                     </div>
                     <div className={styles.timeline_body}>
                       <p className="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
@@ -67,8 +68,8 @@ export default class Story extends React.Component {
                   </div>
                   <div className={styles.timeline_panel}>
                     <div className={styles.timeline_heading}>
-                      <h4>July 2014</h4>
-                      <h4 className="subheading">Phase Two Expansion</h4>
+                      <h4>May 2018</h4>
+                      <h4 className="subheading">Eleven Kittens were adopted</h4>
                     </div>
                     <div className={styles.timeline_body}>
                       <p className="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
@@ -76,11 +77,13 @@ export default class Story extends React.Component {
                   </div>
                 </li>
                 <li className={styles.timeline_inverted}>
-                  <div className={`${styles.timeline_image} ${styles.image_btn}`}>
-                    <h4>Be Part
-                    <br/>Of Our
-                    <br/>Story!</h4>
-                  </div>
+                  <NavLink to="/howto">
+                    <div className={`${styles.timeline_image} ${styles.image_btn}`}>
+                      <h4>Be Part
+                      <br />Of Our
+                      <br />Story!</h4>
+                    </div>
+                  </NavLink>
                 </li>
               </ul>
             </div>

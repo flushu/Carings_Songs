@@ -28,6 +28,8 @@
 
   // Collapse Navbar
   var navbarCollapse = function () {
+    if($("#mainNav").length == 0)
+      return;
     if ($("#mainNav").offset().top > 100) {
       $("#mainNav").addClass("navbar-shrink");
       $("#mainNav").removeClass("navbar-transparent");
@@ -41,11 +43,14 @@
   // Collapse the navbar when page is scrolled
   $(window).scroll(navbarCollapse);
 
-  $('.portfolio-modal').on('show.bs.modal', function (e) {
-    $(".navbar").addClass("d-none");
-  })
-  $('.portfolio-modal').on('hidden.bs.modal', function (e) {
-    $(".navbar").removeClass("d-none");
+  // $('.portfolio-modal').on('show.bs.modal', function (e) {
+  //   $(".navbar").addClass("d-none");
+  // })
+  // $('.portfolio-modal').on('hidden.bs.modal', function (e) {
+  //   $(".navbar").removeClass("d-none");
+  // })
+  $('#exampleModal').on('shown.bs.modal', function () {
+    $('#myInput').trigger('focus')
   })
 
 })(jQuery); // End of use strict

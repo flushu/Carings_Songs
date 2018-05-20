@@ -6,6 +6,23 @@
   margin-top: 0;
   margin-bottom: 15px;
 }
+.btn{
+  background-color: #fed136;
+  border-color: #fed136;
+  font-size: 18px;
+  padding: 20px 40px;
+  font-weight: 700;
+  color: white;
+}
+.btn a{
+  text-decoration: none;
+  color: white;
+}
+.btn:hover{
+  background-color: #ffa136;
+  border-color: #ffa136;
+  color: white;
+}
 
 .subheading {
   font-size: 16px;

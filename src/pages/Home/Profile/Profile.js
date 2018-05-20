@@ -1,14 +1,17 @@
 import React from 'react';
 import styles from './Profile.css';
+import { NavLink } from 'react-router-dom';
 import thumbnail_1 from './img/puffy_profile.jpg';
-import thumbnail_2 from './img/02-thumbnail.jpg';
-import thumbnail_3 from './img/03-thumbnail.jpg';
-import thumbnail_4 from './img/04-thumbnail.jpg';
+import thumbnail_2 from './img/profile_lj.jpeg';
+import thumbnail_3 from './img/profile_thor.jpeg';
+import thumbnail_4 from './img/profile_kittens.jpeg';
 import thumbnail_5 from './img/05-thumbnail.jpg';
 import thumbnail_6 from './img/06-thumbnail.jpg';
 
-
 export default class Profile extends React.Component {
+  constructor(props){
+    super(props);
+  }
   render() {
     return (
       <section id="profile" className={`bg-light ${styles.section}`}>
@@ -21,7 +24,7 @@ export default class Profile extends React.Component {
           </div>
           <div className="row">
             <div className="col-md-4 col-sm-6 portfolio-item">
-              <a className="portfolio-link" data-toggle="modal" href="#portfolioModal1">
+              <a className="portfolio-link" data-toggle="modal" href="#portfolioModal1" data-target="#profileModal" onClick={()=>this.props.profileIndex(0)}>
                 <div className="portfolio-hover">
                   <div className="portfolio-hover-content">
                     <i className="fa fa-plus fa-3x"></i>
@@ -35,7 +38,7 @@ export default class Profile extends React.Component {
               </div>
             </div>
             <div className="col-md-4 col-sm-6 portfolio-item">
-              <a className="portfolio-link" data-toggle="modal" href="#portfolioModal2">
+              <a className="portfolio-link" data-toggle="modal" href="#portfolioModal2" data-target="#profileModal" onClick={()=>this.props.profileIndex(1)}>
                 <div className="portfolio-hover">
                   <div className="portfolio-hover-content">
                     <i className="fa fa-plus fa-3x"></i>
@@ -44,12 +47,12 @@ export default class Profile extends React.Component {
                 <img className="img-fluid" src={thumbnail_2} alt="" />
               </a>
               <div className="portfolio-caption">
-                <h4>Explore</h4>
-                <p className="text-muted">Graphic Design</p>
+                <h4>Lady Jane</h4>
+                <p className="text-muted">Female ? years old</p>
               </div>
             </div>
             <div className="col-md-4 col-sm-6 portfolio-item">
-              <a className="portfolio-link" data-toggle="modal" href="#portfolioModal3">
+              <a className="portfolio-link" data-toggle="modal" href="#portfolioModal3" data-target="#profileModal" onClick={()=>this.props.profileIndex(2)}>
                 <div className="portfolio-hover">
                   <div className="portfolio-hover-content">
                     <i className="fa fa-plus fa-3x"></i>
@@ -58,12 +61,12 @@ export default class Profile extends React.Component {
                 <img className="img-fluid" src={thumbnail_3} alt="" />
               </a>
               <div className="portfolio-caption">
-                <h4>Finish</h4>
-                <p className="text-muted">Identity</p>
+                <h4>Thor</h4>
+                <p className="text-muted">Male ? years old</p>
               </div>
             </div>
             <div className="col-md-4 col-sm-6 portfolio-item">
-              <a className="portfolio-link" data-toggle="modal" href="#portfolioModal4">
+              <a className="portfolio-link" data-toggle="modal" href="#portfolioModal4" data-target="#profileModal" onClick={()=>this.props.profileIndex(3)}>
                 <div className="portfolio-hover">
                   <div className="portfolio-hover-content">
                     <i className="fa fa-plus fa-3x"></i>
@@ -72,37 +75,18 @@ export default class Profile extends React.Component {
                 <img className="img-fluid" src={thumbnail_4} alt="" />
               </a>
               <div className="portfolio-caption">
-                <h4>Lines</h4>
-                <p className="text-muted">Branding</p>
+                <h4>Dizzy and Goldie Sisters (?)</h4>
+                <p className="text-muted">Twin sisters ? years old</p>
               </div>
             </div>
-            <div className="col-md-4 col-sm-6 portfolio-item">
-              <a className="portfolio-link" data-toggle="modal" href="#portfolioModal5">
-                <div className="portfolio-hover">
-                  <div className="portfolio-hover-content">
-                    <i className="fa fa-plus fa-3x"></i>
-                  </div>
-                </div>
-                <img className="img-fluid" src={thumbnail_5} alt="" />
-              </a>
-              <div className="portfolio-caption">
-                <h4>Southwest</h4>
-                <p className="text-muted">Website Design</p>
-              </div>
-            </div>
-            <div className="col-md-4 col-sm-6 portfolio-item">
-              <a className="portfolio-link" data-toggle="modal" href="#portfolioModal6">
-                <div className="portfolio-hover">
-                  <div className="portfolio-hover-content">
-                    <i className="fa fa-plus fa-3x"></i>
-                  </div>
-                </div>
-                <img className="img-fluid" src={thumbnail_6} alt="" />
-              </a>
-              <div className="portfolio-caption">
-                <h4>Window</h4>
-                <p className="text-muted">Photography</p>
-              </div>
+          </div>
+          <div className={`row`}>
+            <div className="col-lg-12 text-center">
+              <NavLink to='/gallery'>
+                <button id="sendMessageButton" className={`btn btn-primary btn-xl text-uppercase ${styles.btn}`} type="submit">
+                  Go to Gallery
+                </button>
+              </NavLink>
             </div>
           </div>
         </div>

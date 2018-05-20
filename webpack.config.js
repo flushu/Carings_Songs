@@ -25,13 +25,14 @@ module.exports = (env) =>{
               loader: 'css-loader',
               options: {
                 importLoaders: 1,
+                sourceMap: true,
                 modules: true,
               }
             }
           ]
         },
         {
-          test: /\.(png|jpg)$/,
+          test: /\.(png|jpg|jpeg)$/,
           use: [
             {
               loader: 'file-loader',
@@ -44,10 +45,17 @@ module.exports = (env) =>{
     plugins:[
       CSSExtract
     ],
-    devtool: isProduction ? 'source-map' : 'cheap-module-eval-source-map',
+    devtool: isProduction ? 'source-map' : 'inline-source-map',
     devServer: {
       contentBase: path.join(__dirname, 'public'),
       historyApiFallback: true
+    },
+    node: {
+      net: 'empty',
+      tls: 'empty',
+      fs: 'empty',
+      dns: 'empty',
+      child_process: 'empty'
     }
   }
 };
